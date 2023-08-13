@@ -32,15 +32,15 @@ if __name__ == '__main__':
     Isreal = True
     for file in file_name_list:
         part_list = [2]
-        epoch_list = [30]
+        epoch_list = [150]
         args = get_args()
         for n_part in part_list:
             for global_epoch in epoch_list:
                 nmi_list=[]
                 ari_list=[]
-                seed_list=[175]
+                #seed_list=[175]
                 tes_epoch_list=[]
-                for seed in seed_list:
+                for seed in range(10):
                     torch.manual_seed(seed)  
                     np.random.seed(seed)
                     torch.manual_seed(seed)
